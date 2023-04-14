@@ -22,7 +22,6 @@ galleryItems.forEach((item) => {
 })
 
 
-
 ulGallery.addEventListener('click', (event) => {
     event.preventDefault()
     let target = event.target
