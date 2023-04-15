@@ -23,10 +23,7 @@ galleryItems.forEach((item) => {
   renderItem(item);
 });
 
-let gallery = new SimpleLightbox(".gallery a", {
+new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250
 });
-gallery.on("show.simplelightbox", function () {});
-
-console.log(gallery);

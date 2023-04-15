@@ -27,26 +27,27 @@ ulGallery.addEventListener('click', (event) => {
     let target = event.target
 
     if (target.className === "gallery__image") {
-
         const instance = basicLightbox.create(`
         <img      
         class="gallery__image"
         src= ${target.dataset.source}
-         
-         />
-         
+         />     
       `)
+        
         instance.show()
-    if(instance.show() === true) {
+
+        if (instance.show() === true) {
         ulGallery.addEventListener( 'keydown', (event)=> {
             if(event.code === 'Escape') {
                 instance.close()
+                console.log(event.code)
             }
-        })
+        }, { once: true })
     }
     }
-
 })
+
+
 
 
 
